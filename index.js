@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
 app.use(cors());
+require("./middleware/prod")(app);
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
