@@ -13,7 +13,7 @@ app.use(function (req, res, next) {
 });
 app.use(express.json());
 mongoose
-  .connect("mongodb://localhost/headlines")
+  .connect("vidly_db")
   .then(console.log("Connecting to mongodb..."))
   .catch((err) => console.error("Some error occured"));
 
