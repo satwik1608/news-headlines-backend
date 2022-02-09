@@ -1,0 +1,20 @@
+{
+  "name": "news-headlines-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "expres": "^0.0.5",
+    "express": "^4.17.2",
+    "joi": "^13.1.0",
+    "mongoose": "^6.2.1",
+    "react-router-dom": "^6.2.1"
+  }
+}
