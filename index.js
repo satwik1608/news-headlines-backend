@@ -12,6 +12,7 @@ app.use(function (req, res, next) {
   next();
 });
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 mongoose
   .connect(
     "mongodb+srv://Satwik:1234@cluster0.rrqrw.mongodb.net/newsHeadlines?retryWrites=true&w=majority"
