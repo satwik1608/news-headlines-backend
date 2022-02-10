@@ -13,7 +13,9 @@ app.use(function (req, res, next) {
 });
 app.use(express.json());
 mongoose
-  .connect("vidly_db")
+  .connect(
+    "mongodb+srv://Satwik:1234@cluster0.rrqrw.mongodb.net/newsHeadlines?retryWrites=true&w=majority"
+  )
   .then(console.log("Connecting to mongodb..."))
   .catch((err) => console.error("Some error occured"));
 
