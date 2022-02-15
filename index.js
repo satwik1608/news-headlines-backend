@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const DB =
-  "mongodb+srv://satwik:1234>@cluster0.7yoen.mongodb.net/headlines?retryWrites=true&w=majority";
+  "mongodb+srv://akshat:akshatgod@cluster0.7yoen.mongodb.net/headlines?retryWrites=true&w=majority";
 mongoose
   .connect(DB)
   .then(console.log("Connecting to mongodb..."))
