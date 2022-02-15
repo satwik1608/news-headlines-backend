@@ -13,19 +13,12 @@ app.use(function (req, res, next) {
 });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+const DB =
+  "mongodb+srv://satwik:1234>@cluster0.7yoen.mongodb.net/headlines?retryWrites=true&w=majority";
 mongoose
-  .connect(
-    "mongodb+srv://satwik:1234>@cluster0.7yoen.mongodb.net/headlines?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useCreateIndex: true,
-      useUnifiesTopology: true,
-      useFindAndModify: false,
-    }
-  )
+  .connect(DB)
   .then(console.log("Connecting to mongodb..."))
-  .catch((err) => console.error("Some error occured"));
+  .catch((err) => console.error(err));
 
 const headlineSchema = new mongoose.Schema({
   likes: Number,
