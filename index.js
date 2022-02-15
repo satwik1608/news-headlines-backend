@@ -13,10 +13,10 @@ app.use(function (req, res, next) {
 });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(useNewUrlParser());
+
 mongoose
   .connect(
-    "mongodb+srv://abcd:1234@cluster0.ooohg.mongodb.net/headlines?retryWrites=true&w=majority"
+    "mongodb+srv://satwik:1234>@cluster0.7yoen.mongodb.net/headlines?retryWrites=true&w=majority"
   )
   .then(console.log("Connecting to mongodb..."))
   .catch((err) => console.error("Some error occured"));
