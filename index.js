@@ -16,7 +16,13 @@ app.use(express.urlencoded({ extended: true }));
 
 mongoose
   .connect(
-    "mongodb+srv://satwik:1234>@cluster0.7yoen.mongodb.net/headlines?retryWrites=true&w=majority"
+    "mongodb+srv://satwik:1234>@cluster0.7yoen.mongodb.net/headlines?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useUnifiesTopology: true,
+      useFindAndModify: false,
+    }
   )
   .then(console.log("Connecting to mongodb..."))
   .catch((err) => console.error("Some error occured"));
