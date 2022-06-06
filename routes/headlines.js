@@ -59,7 +59,7 @@ router.put("/like/:id", async (req, res) => {
   res.send(headline);
 });
 
-router.delete("/:id", [auth, admin], async (req, res) => {
+router.delete("/:id", [auth], async (req, res) => {
   const headline = await Headline.findByIdAndDelete(req.params.id);
 
   if (!headline)
