@@ -23,7 +23,15 @@ router.post("/", async (req, res) => {
   if (user) return res.status(400).send("User already registered");
 
   user = new User(
-    _.pick(req.body, ["name", "email", "password", "about", "anime"])
+    _.pick(req.body, [
+      "firstname",
+      "lastname",
+      "country",
+      "email",
+      "password",
+      "about",
+      "anime",
+    ])
   );
 
   //hashing
@@ -35,7 +43,17 @@ router.post("/", async (req, res) => {
   res
     .header("x-auth-token", token)
     .header("access-control-expose-headers", "x-auth-token") // these are the headers that client can read
-    .send(_.pick(user, ["_id", "name", "email", "about", "anime"])); // clean code
+    .send(
+      _.pick(user, [
+        "_id",
+        "firstname",
+        "lastname",
+        "country",
+        "email",
+        "about",
+        "anime",
+      ])
+    ); // clean code
 });
 
 module.exports = router;
