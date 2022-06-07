@@ -31,6 +31,7 @@ const userSchema = new mongoose.Schema({
   },
   anime: {
     type: String,
+    default: "I am a kid for not liking anime",
     required: false,
     minlength: 3,
     maxlength: 50,
