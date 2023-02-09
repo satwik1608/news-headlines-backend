@@ -10,11 +10,11 @@ app.use(cors());
 
 require("./middleware/prod")(app);
 
-const headKey = process.env.headlines_jwtPrivateKey;
+// const headKey = process.env.headlines_jwtPrivateKey;
 
-if (!headKey) {
-  throw new Error("FATAL ERROR: jwtPrivateKey is not defined");
-}
+// if (!headKey) {
+//   throw new Error("FATAL ERROR: jwtPrivateKey is not defined");
+// }
 
 app.use(function (req, res, next) {
   // res.header("Access-Control-Allow-Origin", "*");
