@@ -36,8 +36,9 @@ app.use(function (req, res, next) {
 });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-const DB =
-  "mongodb+srv://akshat:akshatgod@cluster0.7yoen.mongodb.net/headlines?retryWrites=true&w=majority";
+// const DB =
+//   "mongodb+srv://akshat:akshatgod@cluster0.7yoen.mongodb.net/headlines?retryWrites=true&w=majority";
+const DB = "mongodb://localhost/headlines";
 mongoose
   .connect(DB)
   .then(console.log("Connecting to mongodb..."))
