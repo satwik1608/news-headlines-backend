@@ -7,9 +7,13 @@ const { User } = require("../models/users");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  const headlines = await Headline.find().sort({ author: 1 });
+  try {
+    const headlines = await Headline.find().sort({ author: 1 });
 
-  res.send(headlines);
+    res.send(headlines);
+  } catch (ex) {
+    console.log(ex);
+  }
 });
 
 router.post("/", auth, async (req, res) => {
